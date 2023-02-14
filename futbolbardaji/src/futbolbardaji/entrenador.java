@@ -11,17 +11,22 @@ package futbolbardaji;
 public class entrenador  extends PersonalEquip{
     boolean tiene_titulo;
 
-    public entrenador(boolean tiene_titulo) {
-        this.edad = 50;
-        this.tiene_titulo = true;
+    public entrenador(int id, String nombre, int edad) {
+        super (id, nombre, edad);
+        this.tiene_titulo = tiene_titulo;
+    }
+    
+    public void concentrarse () {
+        super.concentrarse();
+    }
+    
+    public void viajar (){
+        super.viajar();
     }
     
     
-    
-    
-    public void dirigirPartido (){
+    public void dirigir_Partido (){
         
-    
     }
     
     public void entrenar (){

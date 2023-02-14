@@ -11,8 +11,8 @@ package futbolbardaji;
 public class futbolista extends PersonalEquip{
     int goles;
 
-    public futbolista() {
-        this.edad = 20;
+    public futbolista(int id, String nombre, int edad) {
+        super(id, nombre, edad);
         this.goles = 0;
     }
     
