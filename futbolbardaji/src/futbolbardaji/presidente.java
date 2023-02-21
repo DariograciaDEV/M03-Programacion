@@ -10,6 +10,10 @@ package futbolbardaji;
  */
 public class presidente extends PersonalEquip {
     int años_cargo;
+
+    public presidente(int id, String nombre, int edad) {
+        super(id, nombre, edad);
+    }
     
     
     public void ir_palco_partido(){

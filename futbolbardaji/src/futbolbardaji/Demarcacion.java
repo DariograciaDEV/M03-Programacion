@@ -8,16 +8,6 @@ package futbolbardaji;
  *
  * @author dagr5755
  */
-public class masajista extends PersonalEquip {
-    String titulacion;
-
-    public masajista(int id, String nombre, int edad) {
-        super(id, nombre, edad);
-    }
-    
-    
-    public void dar_masaje (){
-        
-    }
-    
+public enum Demarcacion {
+    JUGADOR,MASAJISTA,ENTRENADOR,PRESIDENTE;
 }
