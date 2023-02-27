@@ -42,7 +42,7 @@ public class PracticaClase1 {
         } catch (InputMismatchException ex) {
             System.out.println("No has puesto un entero.");
         }
-        //pausa1segundo();
+        pausa1segundo();
         System.out.println("Final programa");
     }
 
