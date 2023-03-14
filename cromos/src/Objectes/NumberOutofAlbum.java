@@ -10,8 +10,8 @@ package Objectes;
  */
 public class NumberOutofAlbum extends Exception{
 
-    public NumberOutofAlbum(String message) {
-        super(message);
+    public NumberOutofAlbum() {
+        System.out.println("Cromo fuera de limites");
     }
    
 }

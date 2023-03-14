@@ -9,13 +9,13 @@ package Prcromos;
  * @author dagr5755
  */
 public class OptionItem {
-     private String option_phrase;
+
+    private String option_phrase;
 
     public OptionItem(String option_phrase) {
         this.option_phrase = option_phrase;
     }
 
-    
     public String getOption_phrase() {
         return option_phrase;
     }
@@ -26,13 +26,10 @@ public class OptionItem {
 
     @Override
     public String toString() {
-        return  option_phrase ;
+        return option_phrase;
     }
-    
-    
+
     //equals falta implementar!!!!!
-
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -41,13 +38,11 @@ public class OptionItem {
         if (obj == null) {
             return false;
         }
-         if (!(obj instanceof OptionItem)) {
+        if (!(obj instanceof OptionItem)) {
             return false;
         }
         final OptionItem other = (OptionItem) obj;
-        return 
-       this.option_phrase.equalsIgnoreCase(other.option_phrase);
+        return this.option_phrase.equalsIgnoreCase(other.option_phrase);
     }
-    
-}
 
+}

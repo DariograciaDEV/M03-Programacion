@@ -4,12 +4,15 @@
  */
 package Objectes;
 
+import java.util.*;
+
 /**
  *
  * @author dagr5755
  */
-public class Cromo {
-    private int num;
+public class Cromo implements Comparable <Cromo>{
+
+   private int num;
     private String descripcio_cromo;
 
     public Cromo(int num) throws Exception {
@@ -20,7 +23,7 @@ public class Cromo {
     public Cromo(int num, String descripcio_cromo) throws DescriptionTooShort, Exception {
         this.setNum(num);
         this.setDescripcio_cromo(descripcio_cromo);
-        
+
     }
 
     public int getNum() {
@@ -29,19 +32,17 @@ public class Cromo {
 
     /**
      * canvia el valor de num
+     *
      * @param num introducido.
      * @throws Exception si el numero introducido es negativo
      */
     public void setNum(int num) throws Exception {
-        if (num<0)
-        {
-            throw  new Exception("Numero no puede ser negativo");
-        }
-        else
-        {
+        if (num < 0) {
+            throw new Exception("Numero no puede ser negativo");
+        } else {
             this.num = num;
         }
-        
+
     }
 
     public String getDescripcio_cromo() {
@@ -49,14 +50,12 @@ public class Cromo {
     }
 
     public void setDescripcio_cromo(String descripcio_cromo) throws DescriptionTooShort {
-        if(descripcio_cromo.length()<3)
-        {
+        if (descripcio_cromo.length() < 3) {
             throw new DescriptionTooShort();
-        }
-        else
+        } else {
             this.descripcio_cromo = descripcio_cromo;
+        }
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -75,7 +74,18 @@ public class Cromo {
 
     @Override
     public String toString() {
-        return "Cromo " + "num=" + num + ", descripcio_cromo=" + descripcio_cromo ;
+        return "Cromo " + "num:'" + num + "', descripcio:'" + descripcio_cromo + "'";
+    }
+
+    @Override
+    public int compareTo(Cromo o) {
+        /*Compares this object with the specified object for order.
+        Returns a negative integer, zero, or a positive integer as 
+        this object is less than , equal to, or greate than the specified object
+         */
+        return (this.getNum() - o.getNum());
+//         si la ordenació fos per un string
+//        return this.descripcio_cromo.compareTo(o.descripcio_cromo);
     }
 
 }
