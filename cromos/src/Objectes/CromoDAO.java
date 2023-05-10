@@ -105,6 +105,11 @@ private List<Cromo> album;
         if (!ordenado) {
             Collections.sort(album);
             ordenado = true;
+            
+        }
+        
+        if (ordenado % 2 == 0){
+            ordenado= true;
         }
         return album;
     }
